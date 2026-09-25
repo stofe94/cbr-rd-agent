@@ -1,0 +1,55 @@
+# Requirements for runtime.
+pydantic-settings
+
+python-Levenshtein  # speeds up fuzzywuzzy
+filelock
+loguru
+fire
+fuzzywuzzy
+dill
+psutil
+regex
+requests
+PyYAML
+Jinja2
+rich
+tqdm
+typer
+python-dotenv
+
+numpy # we use numpy as default data format. So we have to install numpy
+pandas # we use pandas as default data format. So we have to install pandas
+pyarrow  # pandas.read_parquet for competition data
+scipy  # vector knowledge base (cosine distances)
+
+# LLM backends
+openai
+litellm>=1.73  # to support `from litellm import get_valid_models`
+tiktoken
+google-genai>=1.73,<2  # 2.x not tested with the Google AI Studio backend
+azure.identity  # imported by the default backend module; without it every start logs a warning
+
+# Agent
+pydantic-ai-slim[mcp,openai,prefect]>=1.0,<2  # 2.x removed pydantic_ai.mcp.MCPServerStreamableHTTP (used by the context7 agent)
+prefect
+nest-asyncio
+
+# infrastructure related.
+docker
+
+# UI
+streamlit>=1.47  # to support  input_c.text_area(..., height="content", ...)
+plotly
+matplotlib
+networkx
+
+# kaggle crawler / submission
+selenium
+kaggle
+nbformat # also used for notebook conversion
+
+# data folder desc
+humanize
+
+# version info (rdagent collect_info)
+setuptools-scm

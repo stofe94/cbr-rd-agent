@@ -1,0 +1,44 @@
+# logs
+log/
+
+*.log
+**/*.log
+
+# workspace folder
+workspace/
+
+# Python cache (at every level)
+**/__pycache__
+**/*.pyc
+
+# embeddings / caches
+*.pkl
+*.cache
+**/*.pkl
+*.db
+cache/
+pickle_cache/
+
+# system junk
+.DS_Store
+
+# git history: it holds credentials from early commits; the image gets its
+# version through SETUPTOOLS_SCM_PRETEND_VERSION instead (see Dockerfile)
+.git
+
+# local tooling and private files (gitignored, never published)
+.vscode/
+tools/
+docs/
+snippets/
+eval/
+x_NOTES.txt
+x_TODO.txt
+
+# secret credentials
+secrets.env
+.env
+kaggle.json
+
+# config
+config.env

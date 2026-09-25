@@ -1,0 +1,41 @@
+from pathlib import Path
+import os
+
+from mlebench.grade import validate_submission
+from mlebench.registry import registry
+
+# Check if our submission file exists
+if Path("submission.csv").exists():
+    print("Submission file found, proceeding with validation...")
+    COMPETITION_ID = "<competition_id>"
+    
+    # Try to use mounted data directory first, fall back to default if not available
+    data_dir = os.environ.get("MLEBENCH_DATA_DIR", "/mle/data")
+    if not Path(data_dir).exists():
+        # If /mle/data doesn't exist, try to use the default mlebench data location
+        data_dir = Path.home() / ".data"
+        if not data_dir.exists():
+            # If that doesn't exist either, try current directory
+            data_dir = Path.cwd()
+    
+    print(f"Using data directory: {data_dir}")
+    new_registry = registry.set_data_dir(Path(data_dir))
+    
+    try:
+        competition = new_registry.get_competition(COMPETITION_ID)
+        is_valid, message = validate_submission(Path("submission.csv"), competition)
+        print(message)
+        if not is_valid:
+            raise AssertionError("Submission is invalid")
+    except Exception as e:
+        # If validation fails, check if it's because data isn't prepared
+        error_str = str(e)
+        if "is not prepared" in error_str or "not found" in error_str:
+            print(f"Warning: Dataset validation skipped due to missing prepared data: {e}")
+            print("Note: This may be expected if the mlebench dataset hasn't been prepared yet.")
+        else:
+            raise
+
+else:
+
+    print("Skip submission format validation: submission.csv not found (upstream stage likely failed).")

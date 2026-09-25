@@ -1,0 +1,36 @@
+
+
+# Django stuff:
+*.log
+/log*/
+
+# all pkl files
+*.pkl
+
+
+# all vs-code files
+.vscode/
+
+
+
+# workspace
+workspace/
+
+#cache
+*cache*/
+*.db
+*cache.json
+
+
+
+# secret .env files 
+secrets.env
+
+docs/
+snippets/
+
+x_NOTES.txt
+x_TODO.txt
+
+
+eval/

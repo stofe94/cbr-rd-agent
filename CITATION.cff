@@ -1,0 +1,103 @@
+cff-version: 1.2.0
+message: "If you use CBR-RD-Agent, please cite the paper below."
+title: "CBR-Enhanced RD-Agent for Kaggle Data Science"
+type: software
+authors:
+  - family-names: Stocker
+    given-names: Felix
+    email: felix.stocker@sto-eng.de
+version: 0.1.0
+date-released: "2026-09-25"
+license: MIT
+repository-code: "https://github.com/stofe94/cbr-rd-agent"
+abstract: >-
+  CBR-RD-Agent extends Microsoft's RD-Agent, reduced to its data science scenario,
+  with Case-Based Reasoning: successful experiments are stored as structured cases
+  and retrieved at proposal and coding time, failures are tracked, and a five-gate
+  quality pipeline decides what is retained. A Google AI Studio backend runs
+  Gemma 4 as the reasoning model.
+keywords:
+  - case-based reasoning
+  - LLM agents
+  - autonomous data science
+  - Kaggle
+  - MLE-bench
+  - RD-Agent
+preferred-citation:
+  type: article
+  title: "Towards Persistent Case-Based Memory for Autonomous Data Science: A CBR-Augmented R&D-Agent with a Locally Deployable Small Language Model"
+  authors:
+    - family-names: Stocker
+      given-names: Felix
+  year: 2026
+  url: "https://arxiv.org/abs/2606.05250"
+  identifiers:
+    - type: other
+      value: "arXiv:2606.05250"
+references:
+  - type: article
+    title: "R&D-Agent: An LLM-Agent Framework Towards Autonomous Data Science"
+    authors:
+      - family-names: Yang
+        given-names: Xu
+      - family-names: Yang
+        given-names: Xiao
+      - family-names: Fang
+        given-names: Shikai
+      - family-names: Zhang
+        given-names: Yifei
+      - family-names: Wang
+        given-names: Jian
+      - family-names: Xian
+        given-names: Bowen
+      - family-names: Li
+        given-names: Qizheng
+      - family-names: Li
+        given-names: Jingyuan
+      - family-names: Xu
+        given-names: Minrui
+      - family-names: Li
+        given-names: Yuante
+      - family-names: Pan
+        given-names: Haoran
+      - family-names: Zhang
+        given-names: Yuge
+      - family-names: Liu
+        given-names: Weiqing
+      - family-names: Shen
+        given-names: Yelong
+      - family-names: Chen
+        given-names: Weizhu
+      - family-names: Bian
+        given-names: Jiang
+    year: 2025
+    url: "https://arxiv.org/abs/2505.14738"
+  - type: article
+    title: "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering"
+    authors:
+      - family-names: Chan
+        given-names: Jun Shern
+      - family-names: Chowdhury
+        given-names: Neil
+      - family-names: Jaffe
+        given-names: Oliver
+      - family-names: Aung
+        given-names: James
+      - family-names: Sherburn
+        given-names: Dane
+      - family-names: Mays
+        given-names: Evan
+      - family-names: Starace
+        given-names: Giulio
+      - family-names: Liu
+        given-names: Kevin
+      - family-names: Maksin
+        given-names: Leon
+      - family-names: Patwardhan
+        given-names: Tejal
+      - family-names: Weng
+        given-names: Lilian
+      - family-names: Mądry
+        given-names: Aleksander
+    year: 2024
+    url: "https://arxiv.org/abs/2410.07095"

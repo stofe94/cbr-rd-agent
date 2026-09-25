@@ -1,0 +1,50 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools",
+  "setuptools-scm",
+]
+
+[project]
+authors = [
+  {email = "felix.stocker@sto-eng.de", name = "Felix Stocker"},
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+description = "CBR-Enhanced RD-Agent for Kaggle Data Science"
+dynamic = [
+  "dependencies",
+  "version",
+]
+keywords = [
+  "Autonomous Agents",
+  "Case-Based Reasoning",
+  "Kaggle",
+  "Large Language Models",
+  "Research and Development",
+]
+name = "cbr-rdagent"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+rdagent = "rdagent.app.cli:app"
+
+[project.urls]
+homepage = "https://github.com/stofe94/cbr-rd-agent"
+issue = "https://github.com/stofe94/cbr-rd-agent/issues"
+
+[tool.setuptools]
+packages = ["rdagent"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+version_scheme = "guess-next-dev"
