@@ -1,6 +1,6 @@
 # CBR-Enhanced RD-Agent for Kaggle Data Science
 
-> **An extension of [Microsoft's RD-Agent](https://github.com/microsoft/RD-Agent) that adds Case-Based Reasoning (CBR), a Google AI Studio backend (Gemma 4), and production-ready Docker tooling for autonomous Kaggle competition solving.**
+> **An extension of [Microsoft's RD-Agent](https://github.com/microsoft/RD-Agent) that adds Case-Based Reasoning (CBR), a Google AI Studio backend (Gemma 4), and Docker tooling for autonomous Kaggle competition solving.**
 
 ---
 
@@ -355,7 +355,19 @@ The Google AI Studio backend uses the **[Google Gen AI Python SDK](https://githu
 
 ## Disclaimer
 
-This project is not affiliated with Microsoft. The RD-Agent components used here are provided "as is" without warranty. See [Microsoft's RD-Agent disclaimer](https://github.com/microsoft/RD-Agent#disclaimer) for the upstream project's terms.
+CBR-RD-Agent is a research prototype. The agent writes code with a language model and
+executes it automatically on your machine; in the Docker setup it starts containers
+through the mounted Docker socket, which gives it far-reaching access to the host. It
+calls the Google AI Studio API with your key, which counts against your quota and can
+incur costs, and live leaderboard evaluation submits to Kaggle under your account. Run
+it only on machines and with accounts where this is acceptable, and review generated
+code and results before you rely on them.
+
+The software is provided "as is", without warranty of any kind; see the
+[License](LICENSE). This project is not affiliated with Microsoft. The RD-Agent
+components used here are likewise provided "as is"; see
+[Microsoft's RD-Agent disclaimer](https://github.com/microsoft/RD-Agent#disclaimer) for
+the upstream project's terms.
 
 ---
 

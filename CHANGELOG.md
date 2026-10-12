@@ -4,6 +4,15 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [semantic versioning](https://semver.org/).
 
+## [0.1.1] — 2026-10-12
+
+### Changed
+
+- **README:** the disclaimer now states what running the agent involves: it executes
+  LLM-generated code (with far-reaching host access through the Docker socket), uses
+  your Google AI Studio quota and submits to Kaggle under your account; the software
+  comes without warranty. "Production-ready" is dropped from the tagline.
+
 ## [0.1.0] — 2026-09-25
 
 First public release: Microsoft's RD-Agent, reduced to its data science scenario and
@@ -36,4 +45,5 @@ extended with Case-Based Reasoning, developed and validated on two Kaggle compet
   reinforcement learning, general model extraction and the legacy Kaggle loop, with
   their coders, benchmarks, Docker images and the Flask log server.
 
+[0.1.1]: https://github.com/stofe94/cbr-rd-agent/releases/tag/v0.1.1
 [0.1.0]: https://github.com/stofe94/cbr-rd-agent/releases/tag/v0.1.0

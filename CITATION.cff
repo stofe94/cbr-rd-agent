@@ -6,8 +6,8 @@ authors:
   - family-names: Stocker
     given-names: Felix
     email: felix.stocker@sto-eng.de
-version: 0.1.0
-date-released: "2026-09-25"
+version: 0.1.1
+date-released: "2026-10-12"
 license: MIT
 repository-code: "https://github.com/stofe94/cbr-rd-agent"
 abstract: >-
